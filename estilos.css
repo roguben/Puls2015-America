@@ -58,7 +58,6 @@
 	margin-right: 0.8em; 
 }
 
-
 a
 {
 	color: #22BCE0;
@@ -116,12 +115,12 @@ header h1
 {
 	font-size: 1.2em;
 	font-weight: normal;
-	margin: 1em 70px 0 0;
+	margin: 0.2em 70px 0 0;
 }
 
 header #avatar
 {
-	margin: 1.5em 1em 0 0;
+	margin: .5em 1em 0 0;
 	right: 0;
 	position: absolute;
 	top: 0;
@@ -133,18 +132,29 @@ header #avatar img
 	width: 55px;
 }
 
-header #logo img
+header #logo
 {
 	border-right: 1px solid white;
+	margin: 0 0.5em 0 0;
+}
+
+header #logo img
+{
 	padding-right: 0.5em;
-	margin-right: 0.5em;
+	-webkit-transition: 0.5s;
 	width: 52px;
+}
+
+header #logo img:hover
+{
+	-webkit-transform: rotate(360deg); /*Chrome*/
+	-moz-transform: rotate(360deg); /*Firefox*/
 }
 
 nav
 {
 	background: #80BCA3;
-	padding: 0 0.5em;
+	padding: 0 6em 0 0.5em;
 	position: relative;
 }
 
@@ -158,7 +168,7 @@ nav ul
 nav ul #publicar_nav
 {
 	position: absolute;
-	top: -0.4em;
+	top: -0.2em;
 	right: 0;
 }
 
@@ -166,29 +176,42 @@ nav ul #publicar_nav a
 {
 	background: #22BCE0;
 	border-radius: 5px;
-	padding: 0.8em 0.5em;
+	padding: 0.6em 0.5em 0.8em 2em;
 	text-decoration: none;
 	font-style: italic;
 	text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;
 	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
 }
 
+nav ul #publicar_nav a:before
+{
+	position: absolute;
+	left: 0.3em;
+	top: 0.6em;
+}
+nav ul #publicar_nav a:hover:before
+{
+	font-size: 1.2em;
+}
+
 nav ul li
 {
 	display: inline-block;
-	margin: 0 1em 0 0;
+	margin: 0 0.5em 0 0;
 }
 
 nav ul li a
 {
 	color: white;
 	display: block;
-	padding: 0.5em 0; 
+	padding: 0.5em; 
+	text-decoration: none;
 }
 
 nav ul li a:hover
 {
 	background: #343B54;
+	-webkit-transition: .3s;
 }
 
 #contenido
@@ -208,12 +231,12 @@ nav ul li a:hover
 #contenido .item .autor_item
 {
 	color: #AAA;
-	margin: 0.5em 0;
+	margin: 0.5em 0 2em 0;
 }
 
 #contenido .item .datos_item
 {
-	margin: 0.2em 1em 0.5em 0;
+	margin: 1.2em 1em 0 0;
 }
 
 #contenido .item .datos_item .fecha_item
@@ -276,7 +299,9 @@ nav ul li a:hover
 
 #contenido .votacion .icon-star
 {
-	color: #E8E616;
+	color: #FFBE2C;
+	position: relative;
+	top: 0.1em;
 }
 
 #contenido .votacion .icon-triangle-up
@@ -293,4 +318,21 @@ nav ul li a:hover
 #contenido .item .votacion .guardar_item
 {
 	float: right;
+}
+
+@media screen and (min-width: 800px){
+	#contenido
+	{
+		overflow: hidden;
+	}
+
+	#contenido .item
+	{
+		float: left;	
+		width: 49%;
+	}
+
+	#contenido .item:nth-child(odd){
+		margin-right: 2%;
+	}
 }
