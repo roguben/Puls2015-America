@@ -42,6 +42,7 @@
 
 .icon-star:before {
 	content: "\f02a";
+	margin-right: 0.3em; 
 }
 
 .icon-triangle-down:before {
@@ -185,6 +186,11 @@ nav ul li a
 	padding: 0.5em 0; 
 }
 
+nav ul li a:hover
+{
+	background: #343B54;
+}
+
 #contenido
 {
 	margin: 1em;
@@ -202,11 +208,12 @@ nav ul li a
 #contenido .item .autor_item
 {
 	color: #AAA;
+	margin: 0.5em 0;
 }
 
 #contenido .item .datos_item
 {
-	margin: 1em 1em 0.5em 0;
+	margin: 0.2em 1em 0.5em 0;
 }
 
 #contenido .item .datos_item .fecha_item
@@ -240,7 +247,8 @@ nav ul li a
 {
 	font-size: 1.2em;
 	font-style: italic;
-	padding: 1em 1em 0 0;
+	padding: 0.2em 1em 0 0;
+	margin-bottom: 0;
 }
 
 #contenido .item .titulo_item a
