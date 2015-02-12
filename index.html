@@ -8,8 +8,6 @@
 	<!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>-->
 	<link rel="stylesheet" href="normalize.css"/>	
 	<link rel="stylesheet" href="estilos.css"/>
-	<script src="scrip.js"></script>
-
 </head>
 <body>
 	<header>
@@ -28,7 +26,7 @@
 			<li><a href="#">JavaScript</a></li>
 			<li><a href="#">CSS3</a></li>
 			<li><a href="#">Django</a></li>
-			<li id="publicar_nav"><a href="#" class="icon-pen">Publicar</a></li>
+			<li id="publicar_nav"><a href="#" class="icon-pen" id="mostrar-form">Publicar</a></li>
 		</ul>
 	</nav>
 	<form action="" id="formulario" class="formulario">
@@ -188,5 +186,19 @@
 			Mejorando.la 2015
 		</p>
 	</footer>
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="script.js"></script>
+	<script>
+		window.onload = function(){
+			console.log("Ya se disparo el evento on load");
+		}
+		/*$(document).on('ready', function(){
+			console.log("Ya se disparo el evento DOMContentLoaded");
+		})*/
+
+		/*$(function () {
+			console.log("Ya se disparo el evento DOMContentLoaded");
+		});*/
+	</script>
 </body>
 </html>
